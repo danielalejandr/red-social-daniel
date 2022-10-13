@@ -1,0 +1,27 @@
+footer{
+    height: 300px;
+    background-color: rgb(23, 24, 26);
+}
+
+.faIcon{
+    font-size: 60px;
+}
+
+@media (max-width: 1020px){
+    .enlaces{
+        flex-direction: column;
+    }
+    .img{
+        width: 40px;
+    }
+    .divFooter{
+        padding: 2% 0;
+    }
+    .faIcon{
+        font-size: 20px;
+    }
+    .hola{
+        font-size: 10px;
+        margin: 0;
+    }
+}

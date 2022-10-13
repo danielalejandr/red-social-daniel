@@ -1,0 +1,26 @@
+{
+  "name": "proyectoapi",
+  "version": "1.0.0",
+  "description": "creacion de nuestra API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "keywords": [
+    "lista",
+    "estudiantes",
+    "notas",
+    "bit"
+  ],
+  "author": "Daniel Realpe",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  }
+}

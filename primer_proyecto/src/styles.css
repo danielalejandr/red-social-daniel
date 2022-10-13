@@ -1,0 +1,200 @@
+/* You can add global styles to this file, and also import other style files */
+
+.imagen{
+    background-image: url(https://constructoraseven.com/img/proyectos/yambal-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img{
+    background-image: url(https://constructoraseven.com/img/proyectos/yambal-01.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.imga{
+    background-image: url(https://officesnapshots.com/wp-content/uploads/2017/03/Yanbal_01-1-700x353.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.t{
+    margin: 1%;
+}
+
+.ti{
+    margin-inline-end: 48%;
+
+}
+
+.bg-img{
+    background-image: url(https://www.sifonecompany.com/oficina-virtual-fey/Login/assets/img/backgrounds/1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.bg-img:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    width: 370px;
+    text-align: center;
+    padding: 60px 32px;
+    background: (255, 255, 255,0.4);
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+.content header{
+    color: #000;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255,255,255,0.94);
+}
+
+.field span{
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.space{
+    margin-top: 16px;
+}
+
+.pass{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.pass a{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.pass:hover a{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    background: #3498db;
+    border:  1px solid #2691d9;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="submit"]:hover{
+    background:#2691d9 ;
+}
+
+.login{
+    color: white;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.facebook, .instagram{
+    width: 100%;
+    height: 42px;
+    line-height: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.facebook{
+    background: #4267B2;
+    border: 1px  solid #3e61a8;
+
+}
+
+.instagram{
+    background: #E1306c;
+    border: 1px  solid #df2060;
+    
+}
+
+.link span{
+    font-size: 16px;
+    margin-left: 8px;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup{
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup a{
+    color: #12110f;
+    text-decoration: none;
+}
+
+:root{
+    --color-gris-nav: #d2d4d5;
+    --color-gris-fondo: #f4f4f4;
+    --color-azul: #326fac;
+    --color-blanco: #fff;
+    --color-footer: #111212;
+    --color-facebook: #3f75e1;
+    --color-youtube: #dd4040;
+    --color-instagram: #ca39d2;
+    --color-twitter: #3ab4cf;
+    --color-rojo-autostyle-hover: #d15146;
+    --color-rojo-autostyle: #0645f4;
+    --color-gris-formulario: #738597;
+    --color-verde-facebook: #42b72a;
+    --color-verde-facebbok-hover:#36a420;
+
+}
+
+.nav{
+    background-size: cover;
+}
+
+

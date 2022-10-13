@@ -1,0 +1,69 @@
+<section class=" i">
+    <div class="row p-5">
+        <section class="d-none d-md-block col-md-4">
+            <img src="" class="w-100 rounded my-5" alt="">
+        </section>
+        <section class="col-12 col-md-8">
+            <div class="ig">
+                <h1 class="text-center my-5 im">{{titulo_formulario | uppercase}}</h1>
+            <form class="row g-3 im" [formGroup] ="registroForm" (ngSubmit)="dataUsuario()">
+                <div class="col-12 col-md-6 form-floating">
+                    <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre" id="nombre">
+                    <label for="floatingNombre">Nombre</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('nombre')?.hasError('required') && registroForm.get('nombre')?.touched">Nombre invalido</span>
+                </div>
+                <div class="col-12 col-md-6 form-floating">
+                    <input type="text" formControlName="apellido" class="form-control" placeholder="Apellido" id="apellido">
+                    <label for="floatingApellido">Apellido</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('apellido')?.hasError('required') && registroForm.get('apellido')?.touched">Apellido invalido</span>
+                </div>
+                <div class="col-12 col-md-6 form-floating">
+                    <select id="tipo documento" class="form-select" formControlName="tipodocumento">
+                        <option selected disabled>Tipo de documento</option>
+                        <option value="CC">Cedula de ciudadania</option>
+                        <option value="TI">Tarjeta de identidad</option>
+                    </select>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('tipodocumento')?.hasError('required') && registroForm.get('tipodocumento')?.touched">Campo obligatorio</span>
+                </div>
+                <div class="col-12 col-md-6 form-floating">
+                    <input type="text" formControlName="documento" class="form-control" placeholder="Numero de documento" id="numero documento">
+                    <label for="floatingNumero de documento">Número de documento</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('documento')?.hasError('required') && registroForm.get('documento')?.touched">Número invalido</span>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('documento')?.hasError('pattern')">Número invalido</span>
+                </div>
+                <div class="col-6 col-2 form-floating">
+                    <input type="date" class="form-control" formControlName="fecha" placeholder="Fecha de nacimiento" id="fecha nacimiento">
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('fecha')?.hasError('required') && registroForm.get('fecha')?.touched">Campo Ooligatorio</span>
+                </div>
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" formControlName="contacto" placeholder="Numero de contacto" id="numero contacto">
+                    <label for="floatingNúmero de contacto">Número de contacto</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('contacto')?.hasError('required') && registroForm.get('contacto')?.touched">Número invalido</span>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('contacto')?.hasError('pattern')">Número invalido</span>
+                </div>
+                <div class="col-12 col-md-6 form-floating">
+                    <input class="form-control" type="email" formControlName="correo" placeholder="Correo" id="email">
+                    <label for="floatingCorreo electrónico">Correo electrónico</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('correo')?.hasError('required') && registroForm.get('correo')?.touched">Campo Ooligatorio</span>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('correo')?.hasError('pattern')">correo invalido</span>
+                </div>
+                
+                <div class="col-12 col-md-6 form-floating">
+                    <input  type="password" class="form-control" formControlName="clave" placeholder="Contraseña" id="inputAddres">
+                    <label for="floatingContraseña">Contraseña</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('clave')?.hasError('required') && registroForm.get('clave')?.touched">Campo Obligatorio</span>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('clave')?.hasError('pattern')">Contraseña invalido</span>
+                </div>
+                <div class="col-12 col-md-4 form-floating">
+                    <input type="password" class="form-control" formControlName="vereficarClave" placeholder="Verificar Contraseña" id="vereficar password">
+                    <label for="floatingVerificar contraseña">Verificar contraseña</label>
+                    <span class="text-danger fw-bold" *ngIf="registroForm.get('clave')?.hasError('required') && registroForm.get('clave')?.touched">Contraseña no coincide </span>
+                </div>
+                <div class="d-grid d-md-flex justify-content-md-end gap-sm-2">
+                    <button class="btn btn-primary fw-bold" type="submit" [disabled]="registroForm.invalid">{{ texto_boton}}  usuario</button>
+                </div>
+            </form>
+            </div>
+        </section>
+    </div>
+</section>

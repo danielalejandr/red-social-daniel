@@ -1,0 +1,46 @@
+<section class="container">
+
+
+    <div class="d-flex justify-content-between align-items-center my-5">
+        <h1 class=" fw-bold">Listar Usuarios</h1>
+        <button class="fw-bold btn btn-dark" routerLink="/registro">Registrar usuario<i class="fa-solid fa-user-tie mx-1"></i></button>
+    </div>
+    <h3 class="fw-bold">Total usuarios: {{ listaUsuario.length}}</h3>
+
+    <div class="my-5">
+        <table *ngIf="listaUsuario.length >0" class=" table table-responsive table-striped">
+            <thead>
+                <tr class="fw-bold">
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Tipo documento</th>
+                    <th scope="col">Nuemro de documento</th>
+                    <th class="colspan">fecha de nacimiento</th>
+                    <th class="colspan">Correo</th>
+                    <th class="colspan">Contraseña</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr *ngFor="let miusuario of listaUsuario">
+                        <th>{{miusuario.nombre}}</th>
+                        <td>{{miusuario.apellido}}</td>
+                        <th>{{miusuario.tipodocumento}}</th>
+                        <td>{{miusuario.documento}}</td>
+                        <th>{{miusuario.fecha}}</th>
+                        <td>{{miusuario.contacto}}</td>
+                        <th>{{miusuario.correo}}</th>
+                        <td>
+                            <button class="fw-bold btn btn-primary mx-2 btn-sm" [routerLink]="['/editar-usuario', miusuario._id]">Editar
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button class="fw-bold btn btn-danger mx-2 btn-sm"  (click)="eliminarUsuario(miusuario._id)">Eliminar
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="text-center text-danger fw-boldnpm" *ngIf="listaUsuario.length == 0">No hay usuarios registrados</h2>
+    </div>
+</section>

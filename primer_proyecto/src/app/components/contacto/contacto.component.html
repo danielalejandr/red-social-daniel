@@ -1,0 +1,28 @@
+<section class="py-5">
+    <div class="container my-5 py-">
+        <div class="row">
+            <div class="col-7 col-sm-12 col-md-6 py-5">
+                <img class="img-fluid" src="https://www.buscarutas.com/wp-content/uploads/2017/02/contacto-1.jpg" alt="">
+            </div>
+            <div class="col-5 col-sm-12 col-md-6">
+                <h1 class="text-center mt-5">Contacte con nosotros</h1>
+                <form action="" [formGroup] ="contactoForm" (ngSubmit)="contactoUsuario()" class="mt-5">
+                    <div class="mb-3">
+                        <input type="text" formControlName="nombre" placeholder="Nombre" class="form-control" id="emailLogin">
+                        <span class="text-danger fw-bold" *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched">Nombre invalido</span>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="apellido" placeholder="Apellido" class="form-control" id="emailLogin">
+                        <span class="text-danger fw-bold" *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched">Apellido invalido</span>
+                    </div>
+                    <div class="mb-3">
+                        <input type="Email" formControlName="correo" class="form-control" id="contraseñaLogin" placeholder="correo">
+                        <span class="text-danger fw-bold" *ngIf="contactoForm.get('correo')?.hasError('required') && contactoForm.get('correo')?.touched">Campo Ooligatorio</span>
+                    <span class="text-danger fw-bold" *ngIf="contactoForm.get('correo')?.hasError('pattern')">correo invalido</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary fw-bold">Envíar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
