@@ -1,5 +1,9 @@
+.fondo1{
+    background-image: url(https://img.freepik.com/vector-gratis/diferentes-juegos-emojis_53876-90480.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 
-.ti{
-    margin-inline-end: 48%;
-
+.fondoForm{
+    background-color: rgb(140, 198, 206);
 }
